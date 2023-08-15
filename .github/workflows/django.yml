@@ -8,6 +8,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     strategy:
       max-parallel: 4
       matrix:
@@ -32,8 +34,7 @@ jobs:
         DB_HOST: ${{ secrets.DB_HOST }}
         DB_PORT: ${{ secrets.DB_PORT }}
       run: |
-        coverage run manage.py test
-        coveralls
+        python manage.py test
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@v2
       
