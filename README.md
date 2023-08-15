@@ -1,3 +1,5 @@
+[![Django CI](https://github.com/boterop/alle_commerce/actions/workflows/django.yml/badge.svg?branch=main)](https://github.com/boterop/alle_commerce/actions/workflows/django.yml)
+
 ## Install
 
 Run in console
